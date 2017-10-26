@@ -1,15 +1,78 @@
 <!DOCTYPE html5>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="w3.css" rel="stylesheet" type="text/css" />
 		<link href="main.css" rel="stylesheet" type="text/css" />
 		<title>Reaper - Home</title>
+
+		
 	</head>
 	<body>
-		<div id="header">
-			
+		<div id="head">
+			<div class="w3-contentNMW w3-display-container">
+				<div class="w3-display-container headSlides w3-animate-fading">
+					<img src="placeholderIMG/placeholder1.png" style="width:100%;"/>
+					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+					    Insert Intro Content Here
+					</div>
+				</div>
+				<div class="w3-display-container headSlides w3-animate-fading">
+					<img src="placeholderIMG/placeholder2.png" style="width:100%;"/>
+					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+					    Insert Leadership Content Here
+					</div>
+				</div>
+				<div class="w3-display-container headSlides w3-animate-fading">
+					<img src="placeholderIMG/placeholder3.png" style="width:100%;"/>
+					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+					    Insert Discord Content Here
+					</div>
+				</div>
+				<div class="w3-display-container headSlides w3-animate-fading">
+					<img src="placeholderIMG/placeholder2.png" style="width:100%;"/>
+					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+					    Insert Gallery Content Here
+					</div>
+				</div>
+				<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+				<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+			</div>
+			<script>
+				var myIndex = 0;
+				carousel();
+
+				function carousel() {
+				    var i;
+				    var x = document.getElementsByClassName("headSlides");
+				    for (i = 0; i < x.length; i++) {
+				       x[i].style.display = "none";  
+				    }
+				    myIndex++;
+				    if (myIndex > x.length) {myIndex = 1}    
+				    x[myIndex-1].style.display = "block";  
+				    setTimeout(carousel, 9000);    
+				}
+				showDivs(myIndex);
+
+				function plusDivs(n) {
+				  showDivs(myIndex += n);
+				}
+
+				function showDivs(n) {
+				  var i;
+				  var x = document.getElementsByClassName("headSlides");
+				  if (n > x.length) {myIndex = 1}    
+				  if (n < 1) {myIndex = x.length}
+				  for (i = 0; i < x.length; i++) {
+				     x[i].style.display = "none";  
+				  }
+				  x[myIndex-1].style.display = "block";  
+				}
+			</script>
 		</div>
-		<div id="body">
-			
-		</div>
+
+
+
 	</body>
 </html>
