@@ -1,38 +1,74 @@
 <!DOCTYPE html5>
 <html>
 	<head>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Courgette');
+			@font-face {
+			    font-family: 'ming_gothic_jjcrprima';
+			    src: url('fonts/ming_gothic-webfont.woff2') format('woff2'),
+			         url('fonts/ming_gothic-webfont.woff') format('woff');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+		</style>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="w3.css" rel="stylesheet" type="text/css" />
 		<link href="main.css" rel="stylesheet" type="text/css" />
 		<title>Reaper - Home</title>
+		<script type="text/javascript">
+			// Scroll to specific values
+			// scrollTo is the same
+			window.scroll({
+			  top: 2500, 
+			  left: 0, 
+			  behavior: 'smooth' 
+			});
 
-		
+			// Scroll certain amounts from current position 
+			window.scrollBy({ 
+			  top: 100, // could be negative value
+			  left: 0, 
+			  behavior: 'smooth' 
+			});
+			function indoc(id) {
+				// Scroll to a certain element
+				document.querySelector(id).scrollIntoView({ 
+				  block: "start",
+				  inline: "nearest",
+				  behavior: 'smooth'
+				});
+			}
+		</script>
 	</head>
 	<body>
 		<div id="head">
 			<div class="w3-contentNMW w3-display-container">
 				<div class="w3-display-container headSlides w3-animate-fading">
 					<img src="placeholderIMG/placeholder1.png" style="width:100%;"/>
-					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-					    Insert Intro Content Here
+					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+					    <h1>Insert Intro Content Here</h1><hr />
+					    <h4></h4><button class="nav" onclick="indoc('#introbar')">Click me - Intro Bar</button>
 					</div>
 				</div>
 				<div class="w3-display-container headSlides w3-animate-fading">
 					<img src="placeholderIMG/placeholder2.png" style="width:100%;"/>
-					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-					    Insert Leadership Content Here
+					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+					    <h1>Insert Leadership Content Here</h1><hr />
+					    <h4></h4><a href=""><button class="nav">Click me</button></a>
 					</div>
 				</div>
 				<div class="w3-display-container headSlides w3-animate-fading">
 					<img src="placeholderIMG/placeholder3.png" style="width:100%;"/>
-					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-					    Insert Discord Content Here
+					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+					    <h1>Insert Discord Content Here</h1><hr />
+					    <h4></h4><button class="nav" onclick="indoc('#discordbar')">Click me - Discord Bar</button>
 					</div>
 				</div>
 				<div class="w3-display-container headSlides w3-animate-fading">
 					<img src="placeholderIMG/placeholder2.png" style="width:100%;"/>
-					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
-					    Insert Gallery Content Here
+					<div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black-transparent">
+					    <h1>Insert Gallery Content Here</h1><hr />
+					    <h4></h4><a href=""><button class="nav">Click me</button></a>
 					</div>
 				</div>
 				<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
@@ -71,8 +107,59 @@
 				}
 			</script>
 		</div>
+		<div>
+			<div id="introbar" class="indexbar w3-black">
+				Intro Bar
+			</div>
+			<div id="intro">
+				<div class="outer">
+				  <div class="middle">
+				    <div class="inner foreground">
 
+				      <h1>Intro Bar</h1>
 
+				      <p>Once upon a midnight dreary...</p>
 
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div id="discordbar" class="indexbar w3-black">
+				Discord Bar
+			</div>
+			<div id="discord">
+				<div class="outer">
+				  <div class="middle">
+				    <div class="inner foreground">
+
+				      <h1>Discord Bar</h1>
+
+				      <p>Once upon a midnight dreary...</p>
+
+				    </div>
+				  </div>
+				</div>			
+			</div>
+		</div>
+		<div>
+			<div id="footerbar" class="indexbar w3-black">
+				Footer Bar
+			</div>
+			<div id="footer">
+				<div class="outer">
+				  <div class="middle">
+				    <div class="inner foreground">
+
+				      <h1>Footer Bar</h1>
+
+				      <p>Once upon a midnight dreary...</p>
+
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
