@@ -8,19 +8,24 @@
     font-style: normal;
 }
 
+#body h1 {
+	font-family: 'ming_gothic_jjcrprima';
+	letter-spacing: 0.2em;
+}
 .indexbar {
 	width:100%;
 	height:auto;
 	text-align:center;
 	padding:1em;
 }
+
 #introbar {
 
 }
 #discordbar {
 
 }
-#footerbar {
+#gallerybar {
 
 }
 
@@ -36,7 +41,7 @@
 	width:100%;
 	height:80%;
 }
-#footer {
+#gallery {
 	background: transparent url("placeholderIMG/placeholder1.png") no-repeat scroll center center;
 	background-size:cover;
 	width:100%;
@@ -48,6 +53,8 @@
 	width: 75%;
     height: 75%;
     text-align: center;
+	padding: 1em;
+	margin: 20px;
 }
 #head {
 	height:100%;
@@ -69,18 +76,17 @@
 	text-align: center;
 	float:left;
 }
-#head .nav {
+#head button {
+	font-family: 'Courgette'!important;
+	font-variant: small-caps!important;
 	float:right;
-	border: 3px outset white;
-	background-color: transparent;
-	color: white;
-	font-family: 'Courgette';
-	font-variant: small-caps;
 }
-#head .nav:hover {
-	background-color: black;
-	color:white;
-	border: 3px inset white;
+.contentbtn {
+	float: right;
+	vertical-align: bottom;
+	font-family: 'Courgette'!important;
+	font-variant: small-caps!important;
+	margin: 20px;
 }
 .outer {
     display: table;
@@ -97,4 +103,23 @@
 .inner {
     margin-left: auto;
     margin-right: auto;
+}
+
+
+#minigal img {
+	width: 100%;
+	height: auto%;
+}
+#minigal td {
+	background: black;
+	padding: 15px;
+}
+
+.fullscreen {
+	position:absolute;
+	top: 0px; right: 0px; bottom:0px; left:0px;
+}
+.fullscreen img {
+	width: 100%;
+	height: auto;
 }
