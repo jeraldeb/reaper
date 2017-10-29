@@ -44,9 +44,27 @@
 				  behavior: 'smooth'
 				});
 			}
+			function openNav() {
+			    document.getElementById("menuSidenav").style.width = "15%";
+			    document.getElementById("menu").style.opacity = 0;
+			}
+
+			function closeNav() {
+			    document.getElementById("menuSidenav").style.width = "0%";
+			    document.getElementById("menu").style.opacity = 1;
+			}
 		</script>
 	</head>
 	<body>
+		<div id="menuSidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a class="w3-button w3-black-transparent" href="index.htm">Home</a>
+			<a class="w3-button w3-black-transparent" href="leadership.htm">Leadership</a>
+			<a class="w3-button w3-black-transparent" href="#">Photo Gallery</a>
+		</div>
+		<div id="menu" class="w3-black-transparent">
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		</div>
 		<div id="head">
 			<div class="w3-contentNMW w3-display-container">
 				<div class="w3-display-container headSlides w3-animate-fading">

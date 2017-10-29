@@ -8,6 +8,19 @@
     font-style: normal;
 }
 
+#menu {
+	position: fixed;
+	top:0px;
+	left:0px;
+	z-index: 1;
+	line-height: 30px;
+	margin: 5px;
+}
+
+#head {
+	height:95%;
+	background-color: black;
+}
 #body h1 {
 	font-family: 'ming_gothic_jjcrprima';
 	letter-spacing: 0.2em;
@@ -56,10 +69,7 @@
 	padding: 1em;
 	margin: 20px;
 }
-#head {
-	height:100%;
-	background-color: black;
-}
+
 
 #head h1 {
 	font-family: 'ming_gothic_jjcrprima'!important;
@@ -68,7 +78,6 @@
 	font-size:2.5em;
 	color:white;
 	text-align:center;
-	
 }
 
 #head h4 {
@@ -122,4 +131,50 @@
 .fullscreen img {
 	width: 100%;
 	height: auto;
+}
+.modal-dialog {
+	width:90%!important;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+    font-family: 'Courgette';
+    letter-spacing: 0.1em;
+    font-variant:small-caps;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

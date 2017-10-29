@@ -1,0 +1,44 @@
+	<!DOCTYPE html5>
+	<html>
+	<head>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Courgette');
+			@font-face {
+			    font-family: 'ming_gothic_jjcrprima';
+			    src: url('fonts/ming_gothic-webfont.woff2') format('woff2'),
+			         url('fonts/ming_gothic-webfont.woff') format('woff');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="w3.css" rel="stylesheet" type="text/css" />
+		<link href="main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<title>Reaper - Home</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			function openNav() {
+			    document.getElementById("menuSidenav").style.width = "15%";
+			    document.getElementById("menu").style.opacity = 0;
+			}
+
+			function closeNav() {
+			    document.getElementById("menuSidenav").style.width = "0%";
+			    document.getElementById("menu").style.opacity = 1;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="menuSidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a class="w3-button w3-black-transparent" href="index.htm">Home</a>
+			<a class="w3-button w3-black-transparent" href="leadership.htm">Leadership</a>
+			<a class="w3-button w3-black-transparent" href="#">Photo Gallery</a>
+		</div>
+		<div id="menu" class="w3-black-transparent">
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		</div>
+	</body>
+</html>
