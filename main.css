@@ -8,6 +8,22 @@
     font-style: normal;
 }
 
+#menu {
+	position:sticky;
+	position:-webkit-sticky;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:auto;
+	background-color: black;
+	text-align: center;
+	position:1;
+}
+
+#head {
+	height:100%;
+	background-color: black;
+}
 #body h1 {
 	font-family: 'ming_gothic_jjcrprima';
 	letter-spacing: 0.2em;
@@ -56,10 +72,7 @@
 	padding: 1em;
 	margin: 20px;
 }
-#head {
-	height:100%;
-	background-color: black;
-}
+
 
 #head h1 {
 	font-family: 'ming_gothic_jjcrprima'!important;
@@ -68,7 +81,6 @@
 	font-size:2.5em;
 	color:white;
 	text-align:center;
-	
 }
 
 #head h4 {
@@ -122,4 +134,7 @@
 .fullscreen img {
 	width: 100%;
 	height: auto;
+}
+.modal-dialog {
+	width:90%!important;
 }
