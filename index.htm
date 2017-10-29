@@ -44,6 +44,7 @@
 				  behavior: 'smooth'
 				});
 			}
+			//Navagation bar functions
 			function openNav() {
 			    document.getElementById("menuSidenav").style.width = "15%";
 			    document.getElementById("menu").style.opacity = 0;
@@ -56,6 +57,7 @@
 		</script>
 	</head>
 	<body>
+		<!--Navagation Bar-->
 		<div id="menuSidenav" class="sidenav">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a class="w3-button w3-black-transparent" href="index.htm">Home</a>
@@ -65,6 +67,7 @@
 		<div id="menu" class="w3-black-transparent">
 			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 		</div>
+		<!-- Slideshow -->
 		<div id="head">
 			<div class="w3-contentNMW w3-display-container">
 				<div class="w3-display-container headSlides w3-animate-fading">
@@ -98,6 +101,7 @@
 				<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
 				<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
 			</div>
+			<!--Sideshow Javascript -->
 			<script>
 				var myIndex = 0;
 				carousel();

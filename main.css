@@ -7,7 +7,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 #menu {
 	position: fixed;
 	top:0px;
@@ -177,4 +176,54 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+/*leadership specific CSS */
+#leadheader {
+	height: 7.5%;
+	width: 100%;
+	font-family: 'ming_gothic_jjcrprima';
+	background-color: black;
+	color: white;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	letter-spacing: 0.3em;
+}
+
+#leadership {
+	background-color: green;
+}
+
+.title {
+	background-color: black;
+	width: 20%;
+	height: 10%;
+	border: 1px solid black;
+	margin: 5px;
+}
+
+.leaderbar {
+	width: 95%;
+	height:10%;
+	font-family: 'ming_gothic_jjcrprima';
+	background-color: black;
+	color: white;
+	text-align: center;
+	letter-spacing: 0.3em;
+	margin: 25px auto 25px auto;
+}
+.leadershipbox {
+	width: 90%;
+	text-align: center;
+	margin: auto;
+	padding: 5px;
+	margin: 25px auto 25px auto;
+}
+#guildleader {
+
+}
+#guildofficer {
+
 }
