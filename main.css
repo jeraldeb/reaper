@@ -15,6 +15,14 @@
 	line-height: 30px;
 	margin: 5px;
 }
+#galmenu {
+	position: fixed;
+	top:0px;
+	right:0px;
+	z-index: 1;
+	line-height: 30px;
+	margin: 5px;
+}
 
 #head {
 	height:95%;
@@ -30,7 +38,11 @@
 	text-align:center;
 	padding:1em;
 }
-
+.nolink {
+	text-decoration: none;
+	color: white;
+	background-color: black;
+}
 #introbar {
 
 }
@@ -152,6 +164,11 @@
     font-variant:small-caps;
 }
 
+.galnav {
+    right: 0!important;
+	left: auto;
+}
+
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -171,6 +188,10 @@
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+.galnav .closebtn {
+	left: 5px;
+	margin-left: 0px;
 }
 
 @media screen and (max-height: 450px) {
@@ -250,4 +271,24 @@
 }
 .leadershipdesc h5 {
 	font-family: 'Courgette';
+}
+/*Gallery CSS */
+#fullgallery img {
+	width: 100%;
+	height: auto%;
+}
+#fullgallery td {
+	background: black;
+	padding: 15px;
+}
+#fullgallery h1 {
+	font-family: 'ming_gothic_jjcrprima';
+	letter-spacing: 0.3em;
+	color: white;
+	text-align: center;
+}
+#fullgallery h2 {
+	font-family: 'Courgette';
+	color: white;
+	text-align: center;
 }

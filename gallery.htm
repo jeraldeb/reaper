@@ -1,0 +1,386 @@
+<!DOCTYPE Html5>
+<html>
+	<head>
+		<!--
+			NOTE FOR ADDING PICTURES:
+			-> All general gallery images are id'ed with img[img number]
+			--- ex: id="#img4" (fourth image in main gallery)
+			-> All featured images DO NOT get id'ed
+			-> All images in sections are labeled with [section name][img number]
+			--- ex: id="#guildboat1" (first image in guildboat section)
+							OR 
+			id="#nodewar5" (fith image in nodewar section)
+			---------------------------
+			ABOUT THE GALLERY TABLE
+			
+			The table is four columns wide
+			-- use colspan=4 for section labels
+			-- label wich header with a comment
+			-- give an example of id'ing an image
+			-- example section header code:
+				<tr>
+				< !-- Gallery Header id="#galhead1" -- > <- Make sure to close this comment (and remove this)
+					<td id="topofgal" colspan=4><h1>Gallery</h1></td>
+				</tr>
+			----------------------------
+			ABOUT THE TABLE IAMGES
+			The small imges displaed in a grid
+			
+			-- Use this code to setup your images:
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img2"  src="placeholderIMG/placeholder2.png"></td>
+			-- Set the data-target to the image id
+			-- Change the img src to your image's sources
+			-- Make sure that only 4 images are in each row of the table
+			-- -- Exceptions to the above rule when using colspan and rowspan to make larger images;
+			-- the data-target id should follow the rules stated in the first section
+			----------------------------
+			ABOUT THE FULLSCREEN IMAGES
+			When clicked images should go to fullscreen (besides the slideshow images)
+			
+			-- Use this code to setup your fullscreen image:
+				<div class="modal fade" id="img1" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+			-- Change the id for the top div to the proper image number and section
+			-- Change the image src in the center to the image that matches the id
+			-- place a divider bar such as the one below after the code to sperate images from eachother
+				<!-- ----------------------------- -- > 
+			-- make sure to remove the space in '-- >'
+			-- This code can be placed right below the code that holds your image
+			-- This code can be placed right after the table image code
+		-->
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Courgette');
+			@font-face {
+			    font-family: 'ming_gothic_jjcrprima';
+			    src: url('fonts/ming_gothic-webfont.woff2') format('woff2'),
+			         url('fonts/ming_gothic-webfont.woff') format('woff');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="w3.css" rel="stylesheet" type="text/css" />
+		<link href="main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<title>Reaper - Leadership</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			
+			function scrollto(point) {
+				// scrollTo is the same
+				window.scroll({
+				  top: point, 
+				  left: 0, 
+				  behavior: 'smooth' 
+				});
+			}
+			function scrollby(distance) {
+				// Scroll certain amounts from current position 
+				window.scrollBy({ 
+				  top: distance, // could be negative value
+				  left: 0, 
+				  behavior: 'smooth' 
+				});
+			}
+			function indoc(id) {
+				// Scroll to a certain element
+				document.querySelector(id).scrollIntoView({ 
+				  block: "start",
+				  inline: "nearest",
+				  behavior: 'smooth'
+				});
+			}
+		
+			function openNav() {
+			    document.getElementById("menuSidenav").style.width = "15%";
+			    document.getElementById("menu").style.opacity = 0;
+			}
+
+			function closeNav() {
+			    document.getElementById("menuSidenav").style.width = "0%";
+			    document.getElementById("menu").style.opacity = 1;
+			}
+			
+			function openGalNav() {
+			    document.getElementById("menuGalnav").style.width = "15%";
+			    document.getElementById("galmenu").style.opacity = 0;
+			}
+
+			function closeGalNav() {
+			    document.getElementById("menuGalnav").style.width = "0%";
+			    document.getElementById("galmenu").style.opacity = 1;
+			}
+		</script>
+	</head>
+	<body id="gallerybody">
+		<!-- Main Navigation Menu -->
+		<div id="menuSidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a class="w3-button w3-black-transparent" href="index.htm">Home</a>
+			<a class="w3-button w3-black-transparent" href="leadership.htm">Leadership</a>
+			<a class="w3-button w3-black-transparent" href="gallery.htm">Photo Gallery</a>
+		</div>
+		<div id="menu" class="w3-black-transparent">
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;<p style="font-size:15px; display: inline; padding: 5px;">Menu</p></span>
+		</div>
+		<!-- Gallery Navigation Menu -->
+		<div id="menuGalnav" class="sidenav galnav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeGalNav()">&times;</a>
+			<a class="w3-button w3-black-transparent" onclick="indoc('#topofgal'), closeGalNav()">Top of Gallery</a>
+		</div>
+		<div id="galmenu" class="w3-black-transparent">
+			<span style="font-size:30px;cursor:pointer" onclick="openGalNav()"><p style="font-size:15px; display: inline; padding: 5px;">Gallery Navigation</p>&#9776;</span>
+		</div>
+		
+		
+		
+		<table id="fullgallery">
+			<tr>
+			<!-- Gallery Header -->
+				<td id="topofgal" colspan=4><h1>Gallery</h1></td>
+			</tr>
+			<tr>
+				<td colspan=4>
+				<h2>Featured Images</h2>
+					<div class="w3-contentNMW w3-display-container">
+						<div class="w3-display-container headSlides w3-animate-fading">
+							<img src="placeholderIMG/placeholder1.png" style="width:100%;"/>
+						</div>
+						<div class="w3-display-container headSlides w3-animate-fading">
+							<img src="placeholderIMG/placeholder2.png" style="width:100%;"/>
+						</div>
+						<div class="w3-display-container headSlides w3-animate-fading">
+							<img src="placeholderIMG/placeholder3.png" style="width:100%;"/>
+						</div>
+					</div>
+					
+					<script>
+						var myIndex = 0;
+						carousel();
+
+						function carousel() {
+							var i;
+							var x = document.getElementsByClassName("headSlides");
+							for (i = 0; i < x.length; i++) {
+							   x[i].style.display = "none";  
+							}
+							myIndex++;
+							if (myIndex > x.length) {myIndex = 1}    
+							x[myIndex-1].style.display = "block";  
+							setTimeout(carousel, 9000);    
+						}
+						showDivs(myIndex);
+
+						function plusDivs(n) {
+						  showDivs(myIndex += n);
+						}
+
+						function showDivs(n) {
+						  var i;
+						  var x = document.getElementsByClassName("headSlides");
+						  if (n > x.length) {myIndex = 1}    
+						  if (n < 1) {myIndex = x.length}
+						  for (i = 0; i < x.length; i++) {
+							 x[i].style.display = "none";  
+						  }
+						  x[myIndex-1].style.display = "block";  
+						}
+					</script>
+				</td>
+			</tr>
+			<!-- Place sections above here -->
+			<!-- Newer sections placed above older sections -->
+			<!-- Featured slideshow stays at top -->
+			<!-- Full Gallery Below this Line -->
+			<tr>
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img1"  src="placeholderIMG/placeholder1.png"></td>
+				
+				<div class="modal fade" id="img1" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img2"  src="placeholderIMG/placeholder2.png"></td>
+				
+				<div class="modal fade" id="img2" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img3"  src="placeholderIMG/placeholder1.png"></td>
+				
+				<div class="modal fade" id="img3" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img4"  src="placeholderIMG/placeholder2.png"></td>
+				
+				<div class="modal fade" id="img4" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+			</tr>
+			<tr>
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img5"  src="placeholderIMG/placeholder2.png"></td>
+				
+				<div class="modal fade" id="img5" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img6"  src="placeholderIMG/placeholder3.png"></td>
+				
+				<div class="modal fade" id="img6" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img7"  src="placeholderIMG/placeholder2.png"></td>
+				
+				<div class="modal fade" id="img7" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img8"  src="placeholderIMG/placeholder3.png"></td>
+				
+				<div class="modal fade" id="img8" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+			</tr>
+			<tr>
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img9"  src="placeholderIMG/placeholder1.png"></td>
+				
+				<div class="modal fade" id="img9" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img10"  src="placeholderIMG/placeholder2.png"></td>
+				
+				<div class="modal fade" id="img10" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img11"  src="placeholderIMG/placeholder1.png"></td>
+				
+				<div class="modal fade" id="img11" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img12"  src="placeholderIMG/placeholder2.png"></td>
+				
+				<div class="modal fade" id="img12" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+			</tr>
+			<tr>
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img13"  src="placeholderIMG/placeholder2.png"></td>
+				
+				<div class="modal fade" id="img13" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img14"  src="placeholderIMG/placeholder3.png"></td>
+				
+				<div class="modal fade" id="img14" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img15"  src="placeholderIMG/placeholder2.png"></td>
+				
+				<div class="modal fade" id="img15" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+				
+				<td class="w3-hover-opacity-off w3-opacity"><img data-toggle="modal" data-target="#img16"  src="placeholderIMG/placeholder3.png"></td>
+				
+				<div class="modal fade" id="img16" role="dialog">
+					<div class="modal-dialog modal-lg">
+					  <div class="modal-content fullscreen">
+						<img src="placeholderIMG/placeholder1.png">
+					  </div>
+					</div>
+				</div>
+				<!-- ----------------------------- -->
+			</tr>
+			<!-- ENDED ON 16 -->
+			
+		  </table>
+	</body>
+</html>
