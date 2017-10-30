@@ -180,7 +180,7 @@
 
 /*leadership specific CSS */
 #leadheader {
-	height: 7.5%;
+	height: 10%;
 	width: 100%;
 	font-family: 'ming_gothic_jjcrprima';
 	background-color: black;
@@ -196,12 +196,15 @@
 	background-color: green;
 }
 
-.title {
+.leadershipbox h2 {
 	background-color: black;
 	width: 20%;
 	height: 10%;
 	border: 1px solid black;
-	margin: 5px;
+	display: inline-block;
+	padding: 15px;
+	margin: 15px;
+	cursor: pointer;
 }
 
 .leaderbar {
@@ -213,6 +216,10 @@
 	text-align: center;
 	letter-spacing: 0.3em;
 	margin: 25px auto 25px auto;
+	
+}
+.leaderbar h1 {
+	padding-top:20px;
 }
 .leadershipbox {
 	width: 90%;
@@ -220,10 +227,27 @@
 	margin: auto;
 	padding: 5px;
 	margin: 25px auto 25px auto;
+	font-family: 'Courgette';
+	text-align: center;
 }
 #guildleader {
 
 }
 #guildofficer {
 
+}
+.leadershipdesc {
+	border: 1px solid black;
+	border-radius: 0px;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+.leadershipdesc h1 {
+	font-family: 'ming_gothic_jjcrprima';
+	letter-spacing: 0.3em;
+}
+.leadershipdesc h5 {
+	font-family: 'Courgette';
 }
